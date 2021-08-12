@@ -27,7 +27,7 @@ $(function() {
         })
         // 监听表单的注册提交事件，注意是表单的submit，而不是提交按钮;阻止默认行为
     $('#form_reg').on('submit', function(e) {
-        e.preventDefault()
+        e.preventDefault();
         var data = $('#form_reg').serialize()
             // {
             //     username: $('#form_reg [name=username]').val(),
@@ -58,7 +58,7 @@ $(function() {
                 console.log(res.token);
                 // 登录成功返回token信息
                 localStorage.setItem('token', res.token)
-                location.herf = '/index.html'
+                location.href = '/index.html'
             }
         });
 
