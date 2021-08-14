@@ -20,7 +20,7 @@ function getUserInfo() {
         //   请求头
 
         success: function(res) {
-            if (res.status !== 0) {
+            if (res.code !== 0) {
                 return layui.layer.msg(res.message)
             }
             renderAvatar(res.data)

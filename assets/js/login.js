@@ -33,12 +33,13 @@ $(function() {
             //     username: $('#form_reg [name=username]').val(),
             //     password: $('#form_reg [name=password]').val(),
             // }
-        $.post('/api/reguser', data, function(res) {
-            if (res.status !== 0) {
+        $.post('/api/reg', data, function(res) {
+            if (res.code !== 0) {
                 // return console.log(res.message);
                 return layer.msg(res.message)
             }
             layer.msg("注册成功")
+            $('#link_login').click()
         })
 
     })
@@ -51,7 +52,7 @@ $(function() {
             url: "/api/login",
             data: data,
             success: function(res) {
-                if (res.status !== 0) {
+                if (res.code !== 0) {
                     return layer.msg(res.message)
                 }
                 layer.msg('登录成功')

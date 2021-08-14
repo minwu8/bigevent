@@ -24,10 +24,9 @@ iframe {
 
 /* 当前没有动画抖动bug */
 
-
-/* a {
+a {
     transition: none!important;
-} */
+}
 
 .userinfo {
     height: 60px;
